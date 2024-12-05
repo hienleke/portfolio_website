@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
 
 const Header = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('load',  setIsLoaded(true));
+    return () => {
+      window.removeEventListener('load',  setIsLoaded(true));
+    };
+  }, []);
   return (
-    <header>
+    <header className={`header ${isLoaded ? 'loaded' : ''}`}>
+       <div className="header-image">
+        <img
+          src="./favicon.png" // Replace with your image URL
+          alt="Header"
+          className="header-img"
+        />
+      </div>
       <h1>Le Ke Hien (Tony)</h1>
-      <p>Backend Developer | Node.js Expert</p>
       <nav>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>

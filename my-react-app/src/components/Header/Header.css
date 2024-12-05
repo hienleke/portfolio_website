@@ -1,10 +1,40 @@
 header {
-    background: #333;
-    color: white;
+    display: flex;
+    background: var(--gray-color);
+    color: var(--white-color);
     padding: 20px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    justify-content : space-between;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
   }
   
+header.loaded {
+    transform: translateX(0); /* Move to the normal position */
+    opacity: 1;
+}
+
+  .header-image{
+    width: 150px; /* Set a fixed size for the image */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-img {
+    border-radius: 50%; /* This makes the image circular */
+    border: 5px solid #cc7029; /* Border color and width */
+    overflow: hidden; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the entire area */
+    object-position: center; /* This centers the image */
+  }
   header h1 {
     margin: 0;
     font-size: 2.5rem;
@@ -16,17 +46,21 @@ header {
   }
   
   header nav {
+    display: flex;
     margin-top: 15px;
+    flex-wrap: wrap;
   }
   
   header nav a {
-    color: #61dafb;
+    color: var(--white-color);
     margin: 0 20px;
-    text-decoration: none;
     font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
   }
   
-  header nav a:hover {
-    text-decoration: underline;
+  header nav :hover {
+    transform: scale(1.1); /* Zoom in effect */
+    transform: translateY(-5px); /* Moves the link slightly upward */
   }
   

@@ -1,0 +1,28 @@
+.skill {
+    border-radius: .5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(35 31 32/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(11 169 91/var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(35 31 32/var(--tw-text-opacity));
+    padding: 2rem;
+    filter: drop-shadow(8px 8px 0px var(--brand-charcoal));
+    transform: none;
+}
+
+.skill-card{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-section{
+    display: flex;
+
+}
