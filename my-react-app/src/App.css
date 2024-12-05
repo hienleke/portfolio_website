@@ -49,12 +49,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: val(--white-color)
- 
+  background: val(--white-color);
 }
 
 .App{
-  display: flex;
+  display: flex;  
   flex-direction: column;
 }
 
@@ -71,4 +70,33 @@ footer {
   padding: 10px;
   background: #333;
   color: white;
+}
+
+@keyframes slideAndRotate  {
+  0% {
+    transform: translateX(100vw) rotate(0deg); 
+    opacity: 0.1;
+  }
+  80% {
+    transform: translateX(0) rotate(-400deg); 
+    opacity: 0.8; 
+    }
+  100% {
+  transform: translateX(0) rotate(-360deg); 
+  opacity: 1; 
+  }
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(100vw); 
+
+  }
+  100% {
+      transform: translateX(0); 
+  }
+}
+
+.slideIn {
+  animation: slideIn 1s ease forwards; 
 }

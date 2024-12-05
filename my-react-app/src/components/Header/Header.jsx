@@ -11,8 +11,8 @@ const Header = () => {
     };
   }, []);
   return (
-    <header className={`header ${isLoaded ? 'loaded' : ''}`}>
-       <div className="header-image">
+    <header className ="header">
+      <div className={`header-image ${`header ${isLoaded ? 'loaded' : ''}`}`}>
         <img
           src="./favicon.png" // Replace with your image URL
           alt="Header"

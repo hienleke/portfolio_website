@@ -20,7 +20,7 @@ const Skill = () => {
   ];
 
   return (
-    <section className='skill-section' id="projects">
+    <section className='skill-section slideIn' id="projects">
       <h2>Skill</h2>
         {skills.map((project, index) => (
           <div className='skill-card' key={index}>

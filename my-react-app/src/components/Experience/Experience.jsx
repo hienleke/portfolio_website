@@ -32,7 +32,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience">
+    <section id="experience"  className='slideIn'  >
       <h2>Experience</h2>
       {experiences.map((exp, index) => (
         <div key={index} className="experience">

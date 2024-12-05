@@ -20,7 +20,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects">
+    <section id="projects" className='slideIn'>
       <h2>Projects</h2>
       <ul>
         {projects.map((project, index) => (
