@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import About from './components/About/About';
+import Experience from './components/Experience/Experience';
+import Projects from './components/Project/Projects';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
