@@ -1,4 +1,5 @@
 #experience {
+    background: #fff;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,37 +36,8 @@
 
   .wrap-line{
     position: absolute;
-    width: 2px;
+    width: 1px;
     height: 100%;
-    left: 50%;
-    background-color:  red;  
-    z-index: 1;
   }
   
-  .red-color {
-    color: var(--brand-red)
-  }
 
-  .dot{
-    width: 30px;
-    height: 30px;
-    background-color:  red;  
-    border-radius: 30px;
-  }
-
-  .year{
-
-  }
-
-  .experience-content{
-    display: flex;
-    flex-direction: column;
-    gap : 5px;
-  } 
-
-  .experience-item{
-    padding : 2%;
-    border: 1px solid #373730;
-    border-radius: 30px;
-    font-size: small;
-  }

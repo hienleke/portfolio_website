@@ -19,7 +19,6 @@ const Header = () => {
           className="header-img"
         />
       </div>
-      <h1 className='slideUp'>Le Ke Hien (Tony)</h1>
       <nav className='slideUp'>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
