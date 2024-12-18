@@ -7,6 +7,7 @@ import Projects from './components/Project/Projects';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Skill from './components/Skill/Skill';
+import Spark from './components/Spark/Spark';
 
 function App() {
 
@@ -36,7 +37,8 @@ function App() {
   }, []);
   return (
     <div className="App">
-  <Header activeSection={activeSection} />
+      <Spark></Spark>
+      <Header activeSection={activeSection} />
       <About id="about" />
       <Experience id="experience" />
       <Projects id="projects" />

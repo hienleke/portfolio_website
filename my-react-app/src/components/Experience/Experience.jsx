@@ -71,7 +71,7 @@ const Experience = () => {
   ];
   
   return (
-    <section id="experience"    >
+    <section className="experience"    >
       <h2 className='headLine'> <span className='red-color'>History work</span>  <span></span>Timeline</h2>
       <div className='wrap-line'></div>
       <div className='experience-content'>

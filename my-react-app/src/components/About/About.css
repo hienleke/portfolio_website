@@ -1,21 +1,45 @@
-#about {
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    height: 40%;
-    color: var(--tony-dark-text);
-    background-color: var(--tony-dark-background);
-  }
-  
-  #about h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-  
-  #about p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-  }
-  
+.about {
+	display: flex;
+	padding: 40px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin: 20px;
+	height: auto;
+	color: var(--tony-dark-text);
+	background-color: var(--tony-dark-background);
+}
+
+.about h1 {
+	font-size: 5rem;
+}
+
+.infor{
+  padding: 2rem;
+  display : flex;
+  flex-direction: column;
+  gap : 1rem;
+}
+
+#about h2 {
+	font-size: 2rem;
+	margin-bottom: 15px;
+}
+
+.person-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person-image img {
+  width: 50%;
+  height: 50%;            /* Maintains the aspect ratio of the image */
+  object-fit: contain; 
+  border-radius: 180%;
+}
+
+#about p {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #333;
+}

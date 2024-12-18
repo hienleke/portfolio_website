@@ -43,7 +43,7 @@ body {
 	margin: 0;
 	padding: 0;
 	color: var(--tony-light-very-element-backgound);
-  background: var(--tony-dark-background);
+  	background: var(--tony-dark-background);
 }
 
 .App {
@@ -119,3 +119,21 @@ section {
 	transform: translateY(200px);
 	transition: transform 5s ease;
 }
+
+@keyframes blink {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes jump {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }

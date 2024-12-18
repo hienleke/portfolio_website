@@ -1,11 +1,11 @@
-#experience {
-    padding: 40px;
-    border-radius: 8px;
+.experience {
+    padding: 2rem;
+    border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    background-color: var(--tony-white-background);
   }
   
-  #experience h2 {
+  .experience h2 {
     font-size: 2rem;
     margin-bottom: 20px;
   }
@@ -15,7 +15,7 @@
   }
   
   .experience-item {
- 
+    width: 50%;
   }
   
   .experience  {

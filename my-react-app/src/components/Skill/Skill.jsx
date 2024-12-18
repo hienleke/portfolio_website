@@ -1,33 +1,23 @@
 import React from 'react';
 import './Skill.css';
 const Skill = () => {
-  const skills = [
-    {
-      name: 'File Transfer System Migration',
-      description: 'Migrated to a web platform with cloud integration (AWS, Azure, Google Storage).',
-      link: 'https://innorix.com/en/exacoola/product/7',
-    },
-    {
-      name: 'ERP Notification System',
-      description: 'Developed a robust notification system for an ERP.',
-      link: '#',
-    },
-    {
-      name: 'Chatbot for Support',
-      description: 'Designed a Coze API-based chatbot for software sales and support.',
-      link: '#',
-    },
-  ];
-
+ 
   return (
-    <section className='skill-section slideIn' id="projects">
-      <h2>Skill</h2>
-        {skills.map((project, index) => (
-          <div className='skill-card' key={index}>
-            <h3>{project.name}</h3>
-          </div>
-        ))}
-    </section>
+<div 
+  style={{
+    width: '250px',
+    height: '250px',
+    animation: 'blink 5s infinite, jump 2s infinite',
+    opacity: 0.3,
+    background: 'linear-gradient(103.45deg, #ffeadec4 1.14%, #ff5020c4 55.52%, #f40c0cc4 89.9%), #d9d9d9',
+    filter: 'blur(60px)',
+    transform: 'rotate(-90deg)',
+    position: 'absolute', // Optional for positioning
+    top: '50%', // Optional for centering
+    left: '50%', // Optional for centering
+    transform: 'translate(-50%, -50%) rotate(-90deg)', // Centering + rotation
+  }}
+></div>
   );
 };
 
