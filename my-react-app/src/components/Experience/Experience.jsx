@@ -8,20 +8,6 @@ const Experience = () => {
       location: "Binh Thanh District, HCM city, Viet Nam",
       role: "Fullstack Software Engineer",
       duration: "Dec 2023 – Oct 2024",
-      techstack: [
-        "Node.js (Express, Sails)", 
-        "MySQL", 
-        "Sequelize", 
-        "AWS (RDS, EC2, Lambda, S3)", 
-        "Azure (Blob Storage)", 
-        "Google (Google Storage)", 
-        "Redis", 
-        "Sequelize", 
-        "CronJob", 
-        "Socket", 
-        "CI/CD with GitHub Action", 
-        "React"
-      ],
       responsibilities: [
         "Migrated file transfer system to a web platform with cloud integration (Azure Blob, Google Storage, Amazon S3), enabling drag-and-drop functionality and file management actions.",
         "Migrated legacy queue system to Redis, reducing data loss from 20% to 2-3% and improving transfer reliability. Developed error detection system with Redis integration.",
@@ -35,22 +21,6 @@ const Experience = () => {
       location: "Binh Thanh District, HCM city, Viet Nam",
       role: "Backend Engineer",
       duration: "Nov 2021 – Nov 2023",
-      techstack: [
-        "Node.js (Express, Socket.IO)", 
-        "MongoDB", 
-        "Redis", 
-        "RabbitMQ", 
-        "MySQL", 
-        "Postgres", 
-        "GraphQL", 
-        "Jest", 
-        "CI/CD", 
-        "S3", 
-        "PM2", 
-        "Schedule", 
-        "Docker", 
-        "Microservices"
-      ],
       responsibilities: [
         "Designed and implemented a notification system and newsfeed for ERP system, replacing outdated module.",
         "Migrated data from Discord chat system to custom-built chat system, improving real-time communication by 40%.",
@@ -75,13 +45,12 @@ const Experience = () => {
       <h2 className='headLine'> <span className='red-color'>History work</span>  <span></span>Timeline</h2>
       <div className='wrap-line'></div>
       <div className='experience-content'>
-        {experiences.map((ex) => {
-          return (<div key={ex.company} className='experience-item'> {/* Using a unique key for each experience */}
+        {experiences.map((ex , index) => {
+          return (<div key={ex.company} className={`experience-item ${index % 2 ==0  ? 'left' : 'right'}`}> {/* Using a unique key for each experience */}
             <h4>{ex.company}</h4>
             <p>{ex.location}</p>
             <p><strong>Role:</strong> {ex.role}</p>
             <p><strong>Duration:</strong> {ex.duration}</p>
-            <p><strong>Techstack:</strong></p>
             <p>
               {ex.techstack?.map((tech, index) => (
                 <span key={index}>{tech}</span>

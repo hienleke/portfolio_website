@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 import Skill from './components/Skill/Skill';
 import Spark from './components/Spark/Spark';
 
+
 function App() {
 
   const [activeSection, setActiveSection] = useState('');

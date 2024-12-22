@@ -61,6 +61,7 @@
     display: flex;
     flex-direction: column;
     gap : 5px;
+    width: 100%;
   } 
 
   .experience-item{
@@ -68,4 +69,14 @@
     border: 1px solid #373730;
     border-radius: 30px;
     font-size: small;
+    width: auto;
+    height: auto;
+  }
+
+  .experience-item.left{
+    align-self: flex-start;
+  }
+
+  .experience-item.right{
+    align-self: flex-end;
   }
