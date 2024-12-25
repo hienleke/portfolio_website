@@ -26,16 +26,20 @@
 	--tony-block-border-radius: 0;
 	--tony-container-width: 1400px;
 }
+*, ::before, ::after 
+{
+	box-sizing: border-box;
+}
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	color: var(--tony-light-element-text);
-  scrollbar-width: thin;
-  scrollbar-color: #888 transparent;
-  scroll-behavior: smooth;
-  color: var(--valor-dark-header);
+  	scrollbar-width: thin;
+  	scrollbar-color: #888 transparent;
+  	scroll-behavior: smooth;
+  	color: var(--valor-dark-header);
 }
 
 body {
