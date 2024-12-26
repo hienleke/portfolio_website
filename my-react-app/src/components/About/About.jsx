@@ -3,7 +3,7 @@ import './About.css'
 import lekehien from '../../asset/Lekehien.jpg'
 const About = () => {
   return (
-    <section className="about">
+    <section className="about moveUp-fadeIn ">
       <div className="infor" style={ { flex : 2 }}>
         <h1 style={{ color: 'var(--tony-color1)' }}>Hello,</h1>  
         <h1 style={{ color: 'var()' }}>My name is Le Ke Hien (Tony)</h1>

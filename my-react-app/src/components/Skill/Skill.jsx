@@ -1,24 +1,52 @@
 import React from 'react';
 import './Skill.css';
 const Skill = () => {
- 
-  return (
-<div 
-  style={{
-    width: '250px',
-    height: '250px',
-    animation: 'blink 5s infinite, jump 2s infinite',
-    opacity: 0.3,
-    background: 'linear-gradient(103.45deg, #ffeadec4 1.14%, #ff5020c4 55.52%, #f40c0cc4 89.9%), #d9d9d9',
-    filter: 'blur(60px)',
-    transform: 'rotate(-90deg)',
-    position: 'absolute', // Optional for positioning
-    top: '50%', // Optional for centering
-    left: '50%', // Optional for centering
-    transform: 'translate(-50%, -50%) rotate(-90deg)', // Centering + rotation
-  }}
-></div>
-  );
+  const skills = [
+    { skill: 'Java', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/java.svg' },
+    { skill: 'TypeScript', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/js-square.svg' },
+    { skill: 'JavaScript', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/js.svg' },
+    { skill: 'NodeJS', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/node-js.svg' },
+    { skill: 'Express', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/server.svg' },
+    { skill: 'Socket.IO', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/plug.svg' },
+    { skill: 'Sails', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/anchor.svg' },
+    { skill: 'WebSocket', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/plug.svg' },
+    { skill: 'RabbitMQ', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/rabbit.svg' },
+    { skill: 'Redis', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/database.svg' },
+    { skill: 'Docker', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/docker.svg' },
+    { skill: 'Sequelize', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/database.svg' },
+    { skill: 'Jest', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/vial.svg' },
+    { skill: 'MongoDB', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/database.svg' },
+    { skill: 'MySQL', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/database.svg' },
+    { skill: 'Git', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/git.svg' },
+    { skill: 'BitBucket', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/bitbucket.svg' },
+    { skill: 'SVN', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/code-branch.svg' },
+    { skill: 'GitHub Actions', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/github.svg' },
+    { skill: 'AWS (RDS, EC2, Lambda, S3)', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/cloud.svg' },
+    { skill: 'Azure (Blob Storage)', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/cloud.svg' },
+    { skill: 'Google Cloud (Google Storage)', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/brands/cloud.svg' },
+    { skill: 'CronJob', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/clock.svg' },
+    { skill: 'PM2', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/cogs.svg' },
+    { skill: 'Schedule', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/calendar-alt.svg' },
+    { skill: 'GraphQL', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/cogs.svg' },
+    { skill: 'Microservices', icon: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/cogs.svg' }
+  ];
+  
+
+  return (<div className='skill-section'>
+    {skills.map((skill) => (
+        <div  style={{ margin: '10px', textAlign: 'center' }}>
+        <img
+          src={skill.icon}
+          alt={skill.skill}
+          style={{ width: '50px', height: '50px' }}
+        />
+        <p>{skill.skill}</p>
+      </div>
+    ))}
+
+  </div>
+
+  )
 };
 
 export default Skill;

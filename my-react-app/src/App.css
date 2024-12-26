@@ -38,7 +38,7 @@
 	color: var(--tony-light-element-text);
   	scrollbar-width: thin;
   	scrollbar-color: #888 transparent;
-  	scroll-behavior: smooth;
+  	scroll-behavior: auto;
   	color: var(--valor-dark-header);
 }
 

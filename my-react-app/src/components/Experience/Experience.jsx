@@ -40,45 +40,43 @@ const Experience = () => {
 			],
 		},
 	];
-	const scrollComponent = useRef(null);
-	const [height_wrapLine, setHeight_wrapLine] = useState(0);
-	const handleIntersection = (entries) => {
-	  entries.forEach((entry) => {
-		const { top, bottom } = entry.boundingClientRect; // Get element's position relative to the viewport
-		const viewportHeight = window.innerHeight; // Height of the viewport
-		const elementHeight = entry.target.offsetHeight; // Height of the element itself
-  
-		// Calculate visible part of the element
-		const visibleTop = Math.max(0, top);
-		const visibleBottom = Math.min(viewportHeight, bottom);
-		const visibleHeight = visibleBottom - visibleTop;
-  
-		// Calculate the visibility percentage
-		const percentage = Math.max(0, Math.min(100, (visibleHeight / elementHeight) * 100));
-		
-		  setHeight_wrapLine(`${percentage}%`); 
-		  console.log('height_wrapLine', height_wrapLine);
-	  });
-	};
+	const elementRef = useRef(null);
+	const [height_wrapLine, setHeight_wrapLine] = useState(100);
+
   
 	useEffect(() => {
-		if (!scrollComponent.current) return;
-	  const observer = new IntersectionObserver(handleIntersection, {
-		threshold: Array.from({ length: 101 }, (_, i) => i / 100),
-	  });
-  
-	  // Start observing the component when the component is mounted
-	  if (scrollComponent.current) {
-		observer.observe(scrollComponent.current);
-	  }
-  
-	  return () => observer.disconnect();
-	}, []);
+		const handleScroll = () => {
+		  if (elementRef.current) {
+			const rect = elementRef.current.getBoundingClientRect();
+			const scrollY = window.scrollY || window.pageYOffset;
+			const elementTop = rect.top + scrollY; 
+		
+			const viewportHeight = window.innerHeight || document.documentElement.clientHeight; 
+			const scrollPosition = scrollY + viewportHeight; 
+			const visibilityPercentage = (((scrollPosition -  elementTop) - (rect.height / 5) ) /  rect.height)  * 100;
+		
+			if (visibilityPercentage < 0) {
+				setHeight_wrapLine(0); 
+			} else if (visibilityPercentage > 100) {
+				setHeight_wrapLine(100); 
+			}
+			else  		setHeight_wrapLine(visibilityPercentage); 
+		  }
+		};
+	
+		window.addEventListener("scroll", handleScroll);
+		// Initial check on component mount
+		handleScroll();
+	
+		return () => {
+		  window.removeEventListener("scroll", handleScroll);
+		};
+	  }, []); 
 
 
 
 	return (
-		<section  ref={scrollComponent} className="experience">
+		<section  ref={elementRef} className="experience">
 			<h2 className="headLine expericence-headLine">
 				{" "}
 				<span className="red-color">History work</span> <span></span>Timeline
@@ -91,6 +89,7 @@ const Experience = () => {
 					left: '50%',
 					backgroundColor: 'red',
 					zIndex: 1,
+					transition: 'height 0.3s linear'
 				}}></div>
 				{experiences.map((ex, index) => {
 					return (
@@ -102,9 +101,6 @@ const Experience = () => {
 								<p>{ex.location}</p>
 								<p>
 									<strong>Role:</strong> {ex.role}
-								</p>
-								<p>
-									<strong>Duration:</strong> {ex.duration}
 								</p>
 								<p>
 									{ex.techstack?.map((tech, index) => (

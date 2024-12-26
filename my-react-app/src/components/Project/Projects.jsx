@@ -5,7 +5,6 @@ const Projects = () => {
 
   return (
     <section id="projects" className='slideIn'>
-      <h2>History Timeline</h2>
       <ul>
         {projects.map((project, index) => (
           <li key={index}>
