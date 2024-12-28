@@ -55,8 +55,8 @@ const Experience = () => {
 			const scrollPosition = scrollY + viewportHeight; 
 			const visibilityPercentage = (((scrollPosition -  elementTop) - (rect.height / 5) ) /  rect.height)  * 100;
 		
-			if (visibilityPercentage < 0) {
-				setHeight_wrapLine(0); 
+			if (visibilityPercentage < 30) {
+				setHeight_wrapLine(30); 
 			} else if (visibilityPercentage > 100) {
 				setHeight_wrapLine(100); 
 			}
@@ -84,16 +84,18 @@ const Experience = () => {
 			<div className="experience-content">
 				<div className="wrap-line" style={{
 					position: 'absolute',
-					width: '2px',
+					width: '5px',
 					height: `${height_wrapLine}%`,
 					left: '50%',
 					backgroundColor: 'red',
 					zIndex: 1,
-					transition: 'height 0.3s linear'
+					transition: 'height 0.3s linear',
+					magrin: '3rem 0 ',
 				}}></div>
 				{experiences.map((ex, index) => {
 					return (
-						<div key={ex.company} className={`experience-item`}>
+						<div key={ex.company} className={`experience-item  ${index % 2 == 0 ? 'left' : 'right'}`
+}>
 							{" "}
 							{/* Using a unique key for each experience */}
 							<div className="content">
@@ -117,10 +119,6 @@ const Experience = () => {
 									))}
 								</ul>
 							</div>
-							<div className="dot">
-								
-							</div> 
-							<div className="year">{ex.duration}</div>
 						</div>
 					);
 				})}

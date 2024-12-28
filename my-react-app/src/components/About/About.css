@@ -7,6 +7,7 @@
 	margin: 20px;
 	color: var(--tony-dark-text);
 	background-color: var(--tony-dark-background);
+  height: 30%;
 }
 .about h1 {
 	font-size: 5rem;

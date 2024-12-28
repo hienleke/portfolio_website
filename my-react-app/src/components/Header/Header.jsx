@@ -19,6 +19,11 @@ const Header = () => {
           className="header-img"
         />
       </div>
+      <div className='social'>
+        <img src={'https://skillicons.dev/icons?i=github'} />
+        <img src='https://skillicons.dev/icons?i=gmail' />
+        <img src='https://skillicons.dev/icons?i=linkedin' />
+      </div>
       <nav className='slideUp'>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>

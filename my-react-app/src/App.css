@@ -23,8 +23,11 @@
 	--tony-light-element-text: var(--tony-light-background);
 	--tony-light-very-element-backgound: #e6e1e1;
 	--tony-light-very-element-text: #22262c;
+	--tony-color-black: #19191c;
 	--tony-block-border-radius: 0;
 	--tony-container-width: 1400px;
+	--tony-padding: 10%;
+	--tony-background-image :radial-gradient(circle closest-side, #196974b5, #19697405 75%);
 }
 *, ::before, ::after 
 {
@@ -141,3 +144,15 @@ section {
       transform: translateY(-10px);
     }
   }
+
+  @keyframes scroll_animate {
+  0% {
+    transform: translate(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+}
+

@@ -9,7 +9,7 @@ header {
     top: 0;
     justify-content : space-between;
     z-index: 99;
-    flex : 1
+    flex : 1;
   }
   
 .header-image.loaded {
@@ -64,5 +64,12 @@ header {
   header nav :hover {
     transform: scale(1.1); /* Zoom in effect */
     transform: translateY(-5px); /* Moves the link slightly upward */
+  }
+
+  .header .social img{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+
   }
   
