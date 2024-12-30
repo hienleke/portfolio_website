@@ -6,7 +6,7 @@
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	margin: 20px;
 	color: var(--tony-dark-text);
-	background-color: hsla(14, 76%, 53%, 1);
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b);
 }
 .about h1 {
 	font-size: 1.5rem;

@@ -1,11 +1,11 @@
 .experience {
 	border-radius: 0.5rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	background-color: var(--tony-white-background);
+    background: linear-gradient(45deg, #fef3c7, #fde68a);
 	font-size: 0.6rem;
 	color: #555;
 	height: auto;
-	width: 80%;
+	width: 90%;
 	align-self: center;
 	overflow-y: auto;
 }

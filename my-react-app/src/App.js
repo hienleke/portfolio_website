@@ -42,8 +42,7 @@ function App() {
 				<NavMenu />
 				<Experience />
 				<Skill />
-				<Contact />
-				<Footer />
+				<Footer /> 
 			</div>
 		</div>
 	);

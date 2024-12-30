@@ -25,21 +25,27 @@ const Skill = () => {
   };
 
 	return (
-		<div className="skill-section">
-      {Object.entries(skills).map(([category, skillArray]) => (
-        <div key={category} className="skill-category">
-          <div className="skills">
-            {skillArray.map((skill) => (
-                <img
-                  src={`https://skillicons.dev/icons?i=${skill.toLowerCase()}`}
-                  alt={skill}
-                  style={{ width: "40px", height: "40px" }}
-                />
-            ))}
+    <div className="skill-section">
+      <h2 className="section-title">Skills</h2>
+  {Object.entries(skills).map(([category, skillArray]) => (
+    <div key={category} className="skill-category">
+      <div className="skills">
+        {skillArray.map((skill) => (
+          <div key={skill} className="skill-item" style={{ display: "flex" ,  alignItems: "center", gap: "10px" }}>
+           
+            <img
+              src={`https://skillicons.dev/icons?i=${skill.toLowerCase()}`}
+              alt={skill}
+              style={{ width: "40px", height: "40px" }}
+            />
+             <p style={{ color: "white" }}>{skill.toLowerCase()}</p>
           </div>
-        </div>
-      ))}
-		</div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
 	);
 };
 
