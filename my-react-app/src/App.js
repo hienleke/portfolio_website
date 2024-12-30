@@ -1,13 +1,14 @@
 import React , { useState, useEffect }from 'react';
 import './App.css';
 import Header from './components/Header/Header';
+import NavMenu from './components/Header/Nav/NavMenu';
 import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Project/Projects';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Skill from './components/Skill/Skill';
-import Spark from './components/Spark/Spark';
+import Chat from './components/Chat/Chat';
 
 
 function App() {
@@ -17,8 +18,8 @@ function App() {
   useEffect(() => {
     const sections = document.querySelectorAll('section');
     const options = {
-      root: null, // Observing the viewport
-      threshold: 0.5, // Trigger when 50% of the section is in view
+      root: null, 
+      threshold: 0.5, 
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -38,14 +39,26 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Spark></Spark>
       <Header activeSection={activeSection} />
-      <About id="about" />
-      <Experience id="experience" />
-      <Projects id="projects" />
-      <Skill/>
+      <div className='main-content' style={
+        { padding : '0 5%' , width : '100%', height : 'auto'}
+        }>
+      <About />
+      <NavMenu />
+      <section className="divider" style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flext-start',
+        height : '50%vh'
+      }}>
+        <Skill />
+        <Experience />
+      </section>
+
+  
       <Contact id="contact" />
-      <Footer />
+        <Footer />
+        </div>
     </div>
   );
 }

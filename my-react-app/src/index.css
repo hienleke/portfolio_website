@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Sora Variable,Sora Fallback,Open Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Arial,Open Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;
+  font-family: 'OldNewspaperTypes', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,4 +12,6 @@ code {
 
 html {
   scroll-behavior: smooth;
+  background-color: #fffcf8;
+  transition: background-color .5s;
 }

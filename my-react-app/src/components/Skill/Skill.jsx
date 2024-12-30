@@ -28,16 +28,13 @@ const Skill = () => {
 		<div className="skill-section">
       {Object.entries(skills).map(([category, skillArray]) => (
         <div key={category} className="skill-category">
-          <div className="skills" style={{animation: 'scroll_animate  10s  linear  infinite' , animationDelay : `${Math.random() * 6 - 3}s`}}>
+          <div className="skills">
             {skillArray.map((skill) => (
-              <div key={skill} className="skill-item">
                 <img
                   src={`https://skillicons.dev/icons?i=${skill.toLowerCase()}`}
                   alt={skill}
-                  style={{ width: "50px", height: "50px" }}
+                  style={{ width: "40px", height: "40px" }}
                 />
-                <p>{skill}</p>
-              </div>
             ))}
           </div>
         </div>

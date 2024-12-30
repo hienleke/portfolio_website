@@ -1,14 +1,13 @@
 .experience {
-	padding: 5rem;
 	border-radius: 0.5rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	background-color: var(--tony-white-background);
-	font-size: 1.1rem;
+	font-size: 0.6rem;
 	color: #555;
-	height: 100%;
-	flex : 7 ;
-	width: 70%;
+	height: auto;
+	width: 80%;
 	align-self: center;
+	overflow-y: auto;
 }
 .expericence-headLine {
 	height: 20%;
@@ -34,7 +33,8 @@
 	flex-direction: column;
 	gap: 5px;
 	width: 100%;
-	height: 80%;
+	height: auto;
+	font-size: small;
 }
 
 
@@ -70,6 +70,9 @@
 	height: auto;
 	width: 100%;
 }
+.experience-item .content li {
+	font-size: 0.6rem;
+}
 
 .experience-item::after {
 	position: relative;
@@ -100,7 +103,7 @@
 }
 
 .experience-item .content{
-	padding: 2rem;
+	padding: 0.5rem;
 	border: #555 solid 1px;
 	border-radius: 5px;
 	width: 44%;

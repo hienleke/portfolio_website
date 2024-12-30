@@ -1,4 +1,16 @@
+@font-face {
+	font-family: 'Old Newspaper Types';
+	src: url('./asset//font/OldNewspaperTypes.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
 :root {
+	--tony-background : rgb(15 23 42/var(--tw-bg-opacity));
+	--tw-bg-opacity: 1;
+	--remotive-orange: #FF871A;
+    --remotive-orange-rgb: 255, 135, 26;
+    --remotive-off-white: #FFF6E9;
+    --remotive-sand: #FED294;
 	--tony-color1: #f40c0c;
 	--tony-color1-dark: #a81212;
 	--tony-color1-old: #e24e63;
@@ -10,14 +22,15 @@
 	--tony-color4: #e3b527;
 	--tony-color4-dark: #706238;
 	--tony-dark-background: #100f12;
+	--tony-dark1-background: #ebe7dc;
 	--tony-dark-header: #ececec;
 	--tony-dark-text: #a9a9a9;
+	--tony-light-text: #fcfcfc;
 	--tony-dark-element-backgound: #151519;
 	--tony-dark-element-header: #ececec;
 	--tony-dark-element-text: #a9a9a9;
 	--tony-light-background: #bdb6b6;
-	--tony-white-background: #ffffff;
-	--tony-light-text: #22262c;
+	--tony-white-background: #fffcf8;
 	--tony-light-element-backgound: #22262c;
 	--tony-light-element-header: #ffffff;
 	--tony-light-element-text: var(--tony-light-background);
@@ -46,29 +59,40 @@
 }
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: 'Old Newspaper Types', serif;
 	margin: 0;
 	padding: 0;
 	color: var(--tony-light-very-element-backgound);
-  	background: var(--tony-dark-background);
 }
 
 .App {
 	display: flex;
 	flex-direction: column;
-  background-image: linear-gradient(transparent, transparent 194px, #d9d9d910 194px, #d9d9d910 195px), linear-gradient(90deg, transparent, transparent 194px, #d9d9d910 194px, #d9d9d910 195px);
+	background : var(--tony-background);
+  	background-image: linear-gradient(transparent, transparent 194px, #d9d9d910 194px, #d9d9d910 195px), linear-gradient(90deg, transparent, transparent 194px, #d9d9d910 194px, #d9d9d910 195px);
 	background-size: 195px 195px;
 	background-position: calc(50vw + 70px) 0;
-  background-color:var(--valor-white-background)
+  	background-color:var(--valor-white-background)
 }
 
 section {
-	margin: 20px;
-	padding: 20px;
+	margin: 1rem;
+	padding: 1rem;
 	border-radius: 8px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--border-opacity: 1;
+    border-color: rgba(237, 242, 247, var(--border-opacity));
 }
 
+.card{
+ border-radius: 15rem;
+
+}
+
+.card:hover{
+	--card-box-shadow: var(--root-depth-8);
+    --card-background-color: var(--theme-background-card-hover);
+}
 
 @keyframes slideAndRotate {
 	0% {

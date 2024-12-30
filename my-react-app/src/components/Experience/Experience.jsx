@@ -41,7 +41,7 @@ const Experience = () => {
 		},
 	];
 	const elementRef = useRef(null);
-	const [height_wrapLine, setHeight_wrapLine] = useState(100);
+	const [height_wrapLine, setHeight_wrapLine] = useState(0);
 
   
 	useEffect(() => {
@@ -55,8 +55,8 @@ const Experience = () => {
 			const scrollPosition = scrollY + viewportHeight; 
 			const visibilityPercentage = (((scrollPosition -  elementTop) - (rect.height / 5) ) /  rect.height)  * 100;
 		
-			if (visibilityPercentage < 30) {
-				setHeight_wrapLine(30); 
+			if (visibilityPercentage < 10) {
+				setHeight_wrapLine(10); 
 			} else if (visibilityPercentage > 100) {
 				setHeight_wrapLine(100); 
 			}
@@ -84,7 +84,7 @@ const Experience = () => {
 			<div className="experience-content">
 				<div className="wrap-line" style={{
 					position: 'absolute',
-					width: '5px',
+					width: '2px',
 					height: `${height_wrapLine}%`,
 					left: '50%',
 					backgroundColor: 'red',
@@ -96,8 +96,6 @@ const Experience = () => {
 					return (
 						<div key={ex.company} className={`experience-item  ${index % 2 == 0 ? 'left' : 'right'}`
 }>
-							{" "}
-							{/* Using a unique key for each experience */}
 							<div className="content">
 								<h4>{ex.company}</h4>
 								<p>{ex.location}</p>
