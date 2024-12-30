@@ -8,11 +8,12 @@ header {
   top: 0;
   justify-content : space-between;
   z-index: 99;
-  border: var(--tony-dark-background) 0.2rem solid;
-  border-radius: 1rem;
+  border: rgb(200, 127, 25) 0.1rem solid;
+  border-radius: 0rem 0rem 1rem 1rem ;
   transition: width 0.3s ease;
-  width: 80%;
+  width: 90%;
   align-self: center;
+  height: auto;
 }
 
 .header:hover {
@@ -39,15 +40,15 @@ header {
 
 .header-image {
 	animation: slideAndRotate 4s ease;
-	width: 130px;
-  max-width : 130px;
-	height: 130px;
+	width: 100px;
+ 	 max-width : 100px;
+	height: 100px;
 	opacity: 1;
 }
 
 .header-img {
 	border-radius: 50%; /* This makes the image circular */
-	border: 5px solid var(--tony-dark-background); /* Border color and width */
+	border: 1px solid var(--tony-dark-background); /* Border color and width */
 	overflow: hidden;
 	width: 100%;
 	height: 100%;

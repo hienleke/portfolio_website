@@ -5,14 +5,13 @@ const Header = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const stickyRef = useRef(null); 
   const [isSticky, setIsSticky] = useState(false);
+  const  view_port  = window.innerHeight
 
 useEffect(() => {
   const handleScroll = () => {
     if (stickyRef.current) {
-	let  view_port  = window.innerHeight
-	  let scrollY = window.scrollY;
-      let isSticky_check =   (  scrollY  > view_port) ?  true : false;
-	  console.log("isSticky:", isSticky, "isSticky_check:", isSticky_check);
+	let scrollY = window.scrollY;
+	let isSticky_check =   (  scrollY  > view_port/4) ?  true : false;
       if(isSticky_check !== isSticky )
 	  {
 		setIsSticky(isSticky_check)

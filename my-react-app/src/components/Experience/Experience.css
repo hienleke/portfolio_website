@@ -107,8 +107,19 @@
 	border: #555 solid 1px;
 	border-radius: 5px;
 	width: 44%;
+	
 }
 
 .dot.middle-item{
   margin: 0 auto;
+}
+.duration-working{
+	font-size: .8rem;
+    background-color: #2abba7;
+    color: #fff;
+    padding: 5px 10px;
+    line-height: 1;
+    border-radius: 5px;
+    user-select: none;
+	height: fit-content;
 }

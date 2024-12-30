@@ -78,8 +78,7 @@ const Experience = () => {
 	return (
 		<section  ref={elementRef} className="experience">
 			<h2 className="headLine expericence-headLine">
-				{" "}
-				<span className="red-color">History work</span> <span></span>Timeline
+				<span className="red-color">Experience</span> <span></span>Timeline
 			</h2>
 			<div className="experience-content">
 				<div className="wrap-line" style={{
@@ -95,8 +94,10 @@ const Experience = () => {
 				{experiences.map((ex, index) => {
 					return (
 						<div key={ex.company} className={`experience-item  ${index % 2 == 0 ? 'left' : 'right'}`
-}>
-							<div className="content">
+}>							<div class="duration-working">
+								{ex.duration}
+</div>
+							<div className="content box-card ">
 								<h4>{ex.company}</h4>
 								<p>{ex.location}</p>
 								<p>

@@ -1,16 +1,10 @@
-@font-face {
-	font-family: 'Old Newspaper Types';
-	src: url('./asset//font/OldNewspaperTypes.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-  }
 :root {
-	--tony-background : rgb(15 23 42/var(--tw-bg-opacity));
+	--tony-background: rgb(15 23 42 / var(--tw-bg-opacity));
 	--tw-bg-opacity: 1;
-	--remotive-orange: #FF871A;
-    --remotive-orange-rgb: 255, 135, 26;
-    --remotive-off-white: #FFF6E9;
-    --remotive-sand: #FED294;
+	--remotive-orange: #ff871a;
+	--remotive-orange-rgb: 255, 135, 26;
+	--remotive-off-white: #fff6e9;
+	--remotive-sand: #fed294;
 	--tony-color1: #f40c0c;
 	--tony-color1-dark: #a81212;
 	--tony-color1-old: #e24e63;
@@ -40,10 +34,11 @@
 	--tony-block-border-radius: 0;
 	--tony-container-width: 1400px;
 	--tony-padding: 10%;
-	--tony-background-image :radial-gradient(circle closest-side, #196974b5, #19697405 75%);
+	--tony-background-image: radial-gradient(circle closest-side, #196974b5, #19697405 75%);
 }
-*, ::before, ::after 
-{
+*,
+::before,
+::after {
 	box-sizing: border-box;
 }
 
@@ -52,14 +47,14 @@
 	padding: 0;
 	box-sizing: border-box;
 	color: var(--tony-light-element-text);
-  	scrollbar-width: thin;
-  	scrollbar-color: #888 transparent;
-  	scroll-behavior: auto;
-  	color: var(--valor-dark-header);
+	scrollbar-width: thin;
+	scrollbar-color: #888 transparent;
+	scroll-behavior: auto;
+	color: var(--valor-dark-header);
 }
 
 body {
-	font-family: 'Old Newspaper Types', serif;
+	font-family: "Figtree", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 	margin: 0;
 	padding: 0;
 	color: var(--tony-light-very-element-backgound);
@@ -68,11 +63,11 @@ body {
 .App {
 	display: flex;
 	flex-direction: column;
-	background : var(--tony-background);
-  	background-image: linear-gradient(transparent, transparent 194px, #d9d9d910 194px, #d9d9d910 195px), linear-gradient(90deg, transparent, transparent 194px, #d9d9d910 194px, #d9d9d910 195px);
+	background: var(--tony-background);
+	background-image: linear-gradient(transparent, transparent 194px, #d9d9d910 194px, #d9d9d910 195px), linear-gradient(90deg, transparent, transparent 194px, #d9d9d910 194px, #d9d9d910 195px);
 	background-size: 195px 195px;
 	background-position: calc(50vw + 70px) 0;
-  	background-color:var(--valor-white-background)
+	background-color: var(--valor-white-background);
 }
 
 section {
@@ -81,17 +76,16 @@ section {
 	border-radius: 8px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	--border-opacity: 1;
-    border-color: rgba(237, 242, 247, var(--border-opacity));
+	border-color: rgba(237, 242, 247, var(--border-opacity));
 }
 
-.card{
- border-radius: 15rem;
-
+.card {
+	border-radius: 15rem;
 }
 
-.card:hover{
+.card:hover {
 	--card-box-shadow: var(--root-depth-8);
-    --card-background-color: var(--theme-background-card-hover);
+	--card-background-color: var(--theme-background-card-hover);
 }
 
 @keyframes slideAndRotate {
@@ -152,31 +146,57 @@ section {
 }
 
 @keyframes blink {
-    0%, 100% {
-      opacity: 0.3;
-    }
-    50% {
-      opacity: 0.6;
-    }
-  }
-
-  @keyframes jump {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  @keyframes scroll_animate {
-  0% {
-    transform: translate(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(100%);
-    opacity: 1;
-  }
+	0%,
+	100% {
+		opacity: 0.3;
+	}
+	50% {
+		opacity: 0.6;
+	}
 }
 
+@keyframes jump {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes scroll_animate {
+	0% {
+		transform: translate(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(100%);
+		opacity: 1;
+	}
+}
+
+@keyframes zoom {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	80% {
+		transform: scale(1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.box-card {
+	transition: transform 0.5s ease-in-out;
+	animation: zoom 1s ease forwards;
+}
+
+.box-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
