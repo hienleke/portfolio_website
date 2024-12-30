@@ -8,8 +8,7 @@
     width: 50%;
     height : 100%;
 }
-.skill-section .skills{padding top 
-
+.skill-section .skills{
     display: flex;
     justify-content: center;
     gap: 1rem; 
