@@ -4,8 +4,6 @@ import Header from "./components/Header/Header";
 import NavMenu from "./components/Header/Nav/NavMenu";
 import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
-import Projects from "./components/Project/Projects";
-import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Skill from "./components/Skill/Skill";
 
@@ -45,10 +43,10 @@ function App() {
 					gap: "1rem",              
 					flexDirection: "column"   
 				}}>
-				<About id="about" />
+				<About  />
 				<NavMenu />
-				<Experience id="experience" />
-				<Skill id="skill"/>
+				<Experience  />
+				<Skill />
 				<Footer /> 
 			</div>
 		</div>

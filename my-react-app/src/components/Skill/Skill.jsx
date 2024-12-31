@@ -26,7 +26,7 @@ const Skill = () => {
   };
 
 	return (
-    <div className="skill-section bounds">
+    <div id="skill" className="skill-section bounds">
       <h2 className="section-title">Skills</h2>
   {Object.entries(skills).map(([category, skillArray]) => (
     <div key={category} className="skill-category">

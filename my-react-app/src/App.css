@@ -200,3 +200,15 @@ section {
 	transform: translateY(-1rem) ,scale(1.1);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
+
+@keyframes moveInOut {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
