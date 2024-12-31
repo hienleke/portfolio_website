@@ -57,8 +57,8 @@ const Experience = () => {
 			const scrollPosition = scrollY + viewportHeight; 
 			const visibilityPercentage = (((scrollPosition -  elementTop) - (rect.height / 5) ) /  rect.height)  * 100;
 		
-			if (visibilityPercentage < 10) {
-				setHeight_wrapLine(10); 
+			if (visibilityPercentage < 5) {
+				setHeight_wrapLine(5); 
 			} else if (visibilityPercentage > 100) {
 				setHeight_wrapLine(100); 
 			}
@@ -90,7 +90,7 @@ const Experience = () => {
 					left: '0%',
 					backgroundColor: 'red',
 					zIndex: 1,
-					transition: 'height 0.3s linear',
+					transition: 'height 0.3s ease',
 					magrin: '3rem 0 ',
 				}}></div>
 {experiences.map((ex, index) => {

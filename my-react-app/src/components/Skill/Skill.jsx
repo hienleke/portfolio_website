@@ -13,12 +13,12 @@ const Skill = () => {
       "Nginx", "Npm",
       "Git", "BitBucket", "GitHub", "Docker", "Kubernetes", "Gitlab", "GraphQL", "RabbitMQ"
     ],
-    cloud : ["AWS", "Azure", "GCP" , "AWS S3"],
+    cloud : ["AWS", "Azure", "GCP"],
     databases: [
       "MySQL", "MongoDB", "PostgreSQL", "Redis", "SQLite" , "Firebase"
     ],
     systems: [
-      "Linux", "Windows" ,"Debian" , "Ubuntu"
+      "Linux", "Windows", "Ubuntu"
     ],
     other: [
        "Postman", "Notion" ,"Figma" , "Vscode"

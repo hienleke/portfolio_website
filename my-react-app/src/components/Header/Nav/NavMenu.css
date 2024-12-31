@@ -9,9 +9,10 @@
 	padding: 1.5rem 0;;
 	right: 0rem;
 	border-radius:  1rem;
-	background-color: rgb(69 189 98/20%);
+	background-color: rgba(26, 142, 219, 0.652);
 	animation: slideUp 0.3s ease forwards;
 	color: var(--tony-light-text);
+	border: 1px solid rgb(92, 74, 74);
 }
 .Nav_right a{
 	text-align: center;
