@@ -28,3 +28,9 @@
 	transform: translateY(-0.5rem) scale(1.05);
 	background-color: var(--tony-light-text);
 }
+
+.Nav_right.active{
+	color :var(--tony-dark-background);
+	transform: translateY(-0.5rem) scale(1.05);
+	background-color: var(--tony-light-text);
+}
