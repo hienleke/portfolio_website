@@ -9,7 +9,7 @@ const Experience = () => {
 			location: "Binh Thanh District, HCM city, Viet Nam",
 			role: "Fullstack Software Engineer",
 			duration: "Dec 2023 – Oct 2024",
-			skills : ["microservices", "docker", "rabbitmq", "redis", "nodejs", "express", "react", "redux", "jest", "prisma", "mysql", "aws", "azure", "gcp"],
+			skills : ["Express", "RabbitMQ", "React", "Redis", "Redux", "Sequelize", "Socket", "Typescript", "SailJS", "Nginx", "DataDog", "Pm2","AWS (RDS, EC2, Lamda, S3)", "Azure (Blob Storage)", "Github Action", "CronJob", "Docker", "Express", "GCP (Google Storage)", "Jest", "Microservices", "MySql",  "Prisma"],
 			responsibilities: [
 				"Migrated file transfer system to a web platform with cloud integration (Azure Blob, Google Storage, Amazon S3), enabling drag-and-drop functionality and file management actions.",
 				"Migrated legacy queue system to Redis, reducing data loss from 20% to 2-3% and improving transfer reliability. Developed error detection system with Redis integration.",
@@ -23,6 +23,7 @@ const Experience = () => {
 			location: "Binh Thanh District, HCM city, Viet Nam",
 			role: "Backend Engineer",
 			duration: "Nov 2021 – Nov 2023",
+			skills: ["Nodejs (Express, SocketIO)", "MongoDB", "Redis", "RabbitMQ", "MySQL", "Postgres", "GraphQL", "Jest", "CI/CD", "S3", "PM2", "Schedule", "Docker", "Microservice"],
 			responsibilities: [
 				"Designed and implemented a notification system and newsfeed for ERP system, replacing outdated module.",
 				"Migrated data from Discord chat system to custom-built chat system, improving real-time communication by 40%.",
@@ -79,7 +80,7 @@ const Experience = () => {
 	return (
 		<section  ref={elementRef} className="experience bounds ">
 			<h2 className="headLine expericence-headLine">
-				<span className="red-color">Experience</span> <span></span>Timeline
+				<span className="red-color">Experience</span>
 			</h2>
 			<div className="experience-content">
 				<div className="wrap-line" style={{
@@ -106,9 +107,9 @@ const Experience = () => {
           <h4>{ex.company}</h4>
           <p style={{color : '#747474' }}>{ex.location}</p>
         </div>
-        <p>
+        <h4>
          {ex.role}
-        </p>
+        </h4>
         <p>
           {ex.techstack?.map((tech, idx) => (
             <span key={idx}>{tech}</span>
@@ -119,9 +120,9 @@ const Experience = () => {
             <li key={idx}>{responsibility}</li>
           ))}
 			  </ul>
-			  <div style={{ display: "flex", gap: "10px" , flexWrap: "wrap" , fontSize: "0.7rem" , marginTop: "1rem"}}>
-				  {ex.skills?.map((skill, idx) => (<div style={{ padding: '0.3rem 0.5rem', background: '#2abba7', color: 'white', borderRadius: '5px' }} key={idx}>
-					  {skill}
+			  <div className="skill-tabs">
+				  {ex.skills?.map((skill, idx) => (<div className="skill-tab" key={idx}>
+					  {skill.toLowerCase()}
 				  </div>))}
 			  </div>
       </div>

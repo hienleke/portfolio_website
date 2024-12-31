@@ -9,7 +9,7 @@
 	padding: 1.5rem 0;;
 	right: 0rem;
 	border-radius:  1rem;
-	background: linear-gradient(60deg, #5ed310, #3ea342, #05cf0f);;
+	background-color: rgb(69 189 98/20%);
 	animation: slideUp 0.3s ease forwards;
 	color: var(--tony-light-text);
 }
