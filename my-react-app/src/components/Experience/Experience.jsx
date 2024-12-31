@@ -51,7 +51,7 @@ const Experience = () => {
 			logo: apg_logo,
 			role: "Backend Engineer",
 			duration: "Nov 2021 – Nov 2023",
-			skills: ["Express",  "SocketIO","MongoDB", "Redis", "RabbitMQ", "MySQL", "Postgres", "GraphQL", "Jest", "CI/CD", "S3", "PM2", "Schedule", "Docker", "Microservice" ,"DataDog" , "ELK"],
+			skills: ["Express",  "SocketIO","MongoDB", "Redis", "RabbitMQ", "MySQL", "Postgres", "GraphQL", "Jest", "CI/CD", "S3", "PM2", "Schedule", "Docker", "Microservice" ,"DataDog" ],
 			responsibilities: [
 				"Designed and implemented a notification system and newsfeed for ERP system, replacing outdated module.",
 				"Migrated data from Discord chat system to custom-built chat system, improving real-time communication by 40%.",
