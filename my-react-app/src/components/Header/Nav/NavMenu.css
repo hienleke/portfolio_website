@@ -12,7 +12,6 @@
 	background-color: rgba(26, 142, 219, 0.652);
 	animation: all 0.3s linear forwards;
 	color: var(--tony-light-text);
-	border: 1px solid rgb(92, 74, 74);
 }
 .Nav_right a{
 	text-align: center;
