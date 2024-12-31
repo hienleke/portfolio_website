@@ -127,7 +127,7 @@ const Experience = () => {
 							<div className="duration-working">{ex.duration}</div>
 							<div className="content box-card">
 								<div className="company-info" style={{ display: "flex", width: "100%", justifyContent: "space-between", alignItems: "center" }}>
-								<div><img style = {{ height : '50px' , width : '50px' , borderRadius : '50%'}} src={ex.logo}></img>	<h4>{ex.company}</h4> {ex.product_link ?<span>Demo : <span class="emoji">👉</span> <a href={ex.product_link} target="_blank">Link </a>   </span> :   " "}</div>
+								<div><img style = {{ height : '50px' , width : '50px' , borderRadius : '50%'}} src={ex.logo}></img>	<h4>{ex.company}</h4 > {ex.product_link ?<span>Demo : <span class="emoji">👉</span> <a href={ex.product_link}  style ={{ color : '#029aeb'}} target="_blank">Link </a>   </span> :   " "}</div>
 									<p style={{ color: "#747474" }}>{ex.location}</p>
 								</div>
 						
