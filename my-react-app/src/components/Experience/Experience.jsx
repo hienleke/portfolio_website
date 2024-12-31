@@ -26,7 +26,7 @@ const Experience = () => {
 				"Nginx",
 				"DataDog",
 				"Pm2",
-				"AWS (RDS, EC2, Lamda, S3)",
+				"AWS (RDS, EC2, Lamda, S3 , CDK , API Gateway , CloudFont)", 
 				"Azure (Blob Storage)",
 				"Github Action",
 				"CronJob",
