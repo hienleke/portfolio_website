@@ -34,6 +34,9 @@
 .bounds {
 	animation: Bound 1s ease;
 }
+.text-about{
+	animation: typing 4s steps(10) infinite, blink 0.5s step-end infinite;
+}
 
 @keyframes Bound {
 	0% {

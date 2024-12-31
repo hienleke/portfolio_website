@@ -4,7 +4,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer class="footer">
+    <footer className="footer">
       <Contact/>
       <p>&copy; 2024 Le Ke Hien. All rights reserved.</p>
     </footer>

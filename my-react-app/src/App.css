@@ -212,3 +212,17 @@ section {
         transform: translateX(0); 
     }
 }
+@keyframes typing {
+    0%, 50% {
+        content: "Hello World";
+    }
+    50%, 100% {
+        content: "CSS Animation";
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
