@@ -3,6 +3,7 @@ import "./Experience.css";
 import innorix_logo  from '../../asset/innorix.jfif'
 import bosch_logo from '../../asset/bosch.jfif'
 import apg_logo from '../../asset/apg.jpg'
+import useVisibility from "../custom_hook/useVisibility";
 const Experience = () => {
 	const experiences = [
 		{
@@ -72,6 +73,8 @@ const Experience = () => {
 		},
 	];
 	const elementRef = useRef(null);
+	useVisibility(elementRef, 'experience');
+	
 	const [height_wrapLine, setHeight_wrapLine] = useState(0);
 
 	useEffect(() => {
@@ -94,9 +97,7 @@ const Experience = () => {
 		};
 
 		window.addEventListener("scroll", handleScroll);
-		// Initial check on component mount
 		handleScroll();
-
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};

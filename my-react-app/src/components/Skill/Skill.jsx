@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Skill.css";
+import useVisibility from "../custom_hook/useVisibility";
+
 const Skill = () => {
+  const currentRef = useRef(null);
+  useVisibility(currentRef, 'Skill');
   const skills =
   {
     programming_languages: [
@@ -26,7 +30,7 @@ const Skill = () => {
   };
 
 	return (
-    <div id="skill" className="skill-section bounds">
+    <div id="skill" className="skill-section bounds" ref={currentRef}>
       <h2 className="section-title">Skills</h2>
   {Object.entries(skills).map(([category, skillArray]) => (
     <div key={category} className="skill-category">

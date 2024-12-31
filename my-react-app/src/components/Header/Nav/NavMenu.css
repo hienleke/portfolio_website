@@ -10,7 +10,7 @@
 	right: 0rem;
 	border-radius:  1rem;
 	background-color: rgba(26, 142, 219, 0.652);
-	animation: slideUp 0.3s ease forwards;
+	animation: all 0.3s linear forwards;
 	color: var(--tony-light-text);
 	border: 1px solid rgb(92, 74, 74);
 }
@@ -29,7 +29,7 @@
 	background-color: var(--tony-light-text);
 }
 
-.Nav_right.active{
+.Nav_right .active{
 	color :var(--tony-dark-background);
 	transform: translateY(-0.5rem) scale(1.05);
 	background-color: var(--tony-light-text);

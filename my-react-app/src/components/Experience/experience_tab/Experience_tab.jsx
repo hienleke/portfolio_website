@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import useVisibility from '../../custom_hook/useVisibility';
 import './Experience.css'
 
 const Experience = () => {
