@@ -37,11 +37,18 @@ function App() {
 	return (
 		<div className="App">
 			<Header activeSection={activeSection} />
-			<div className="main-content" style={{ padding: "0 5%", width: "100%", height: "auto" }}>
-				<About />
+			<div className="main-content" style={{
+					padding: "0 5%",         
+					width: "100%",           
+					height: "auto",           
+					display: "flex",        
+					gap: "1rem",              
+					flexDirection: "column"   
+				}}>
+				<About id="about" />
 				<NavMenu />
-				<Experience />
-				<Skill />
+				<Experience id="experience" />
+				<Skill id="skill"/>
 				<Footer /> 
 			</div>
 		</div>

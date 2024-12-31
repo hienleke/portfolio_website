@@ -1,7 +1,7 @@
 header {
   position: sticky;
   display: flex;
-  background: linear-gradient(60deg, #2110d3, #3ea342, #1c9e95);
+  background: linear-gradient(60deg, #5a44d7, #3ea342, #1c9e95);
   color: var(--white-color);
   padding: 1.3rem;
   align-items: center;
@@ -17,13 +17,13 @@ header {
 }
 
 .header:hover {
-  width: 100%;
+  width: 98%;
   background: linear-gradient(60deg, #5ed310, #3ea342, #c10b81);;
 
 }
 
 .header.isSticky {
-	width: 100%;
+	width: 98%;
 	background: linear-gradient(60deg, #5ed310, #3ea342, #c10b81);;
 }
 

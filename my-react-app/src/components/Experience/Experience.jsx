@@ -9,6 +9,7 @@ const Experience = () => {
 			location: "Binh Thanh District, HCM city, Viet Nam",
 			role: "Fullstack Software Engineer",
 			duration: "Dec 2023 – Oct 2024",
+			skills : ["microservices", "docker", "rabbitmq", "redis", "nodejs", "express", "react", "redux", "jest", "prisma", "mysql", "aws", "azure", "gcp"],
 			responsibilities: [
 				"Migrated file transfer system to a web platform with cloud integration (Azure Blob, Google Storage, Amazon S3), enabling drag-and-drop functionality and file management actions.",
 				"Migrated legacy queue system to Redis, reducing data loss from 20% to 2-3% and improving transfer reliability. Developed error detection system with Redis integration.",
@@ -76,7 +77,7 @@ const Experience = () => {
 
 
 	return (
-		<section  ref={elementRef} className="experience">
+		<section  ref={elementRef} className="experience bounds ">
 			<h2 className="headLine expericence-headLine">
 				<span className="red-color">Experience</span> <span></span>Timeline
 			</h2>
@@ -85,42 +86,49 @@ const Experience = () => {
 					position: 'absolute',
 					width: '2px',
 					height: `${height_wrapLine}%`,
-					left: '50%',
+					left: '0%',
 					backgroundColor: 'red',
 					zIndex: 1,
 					transition: 'height 0.3s linear',
 					magrin: '3rem 0 ',
 				}}></div>
-				{experiences.map((ex, index) => {
-					return (
-						<div key={ex.company} className={`experience-item  ${index % 2 == 0 ? 'left' : 'right'}`
-}>							<div class="duration-working">
-								{ex.duration}
-</div>
-							<div className="content box-card ">
-								<h4>{ex.company}</h4>
-								<p>{ex.location}</p>
-								<p>
-									<strong>Role:</strong> {ex.role}
-								</p>
-								<p>
-									{ex.techstack?.map((tech, index) => (
-										<span key={index}>{tech}</span>
-									))}
-								</p>
+{experiences.map((ex, index) => {
+  return (
+    <div 
+      key={ex.company} 
+      className={`experience-item ${index % 2 === 0 ? 'left' : 'right'}`}
+    >
+      <div className="duration-working">
+        {ex.duration}
+      </div>
+      <div className="content box-card">
+        <div className="company-info" style={{ display: "flex", width : '100%', justifyContent: "space-between" , alignItems: "center"}}>
+          <h4>{ex.company}</h4>
+          <p style={{color : '#747474' }}>{ex.location}</p>
+        </div>
+        <p>
+         {ex.role}
+        </p>
+        <p>
+          {ex.techstack?.map((tech, idx) => (
+            <span key={idx}>{tech}</span>
+          ))}
+        </p>
+        <ul>
+          {ex.responsibilities.map((responsibility, idx) => (
+            <li key={idx}>{responsibility}</li>
+          ))}
+			  </ul>
+			  <div style={{ display: "flex", gap: "10px" , flexWrap: "wrap" , fontSize: "0.7rem" , marginTop: "1rem"}}>
+				  {ex.skills?.map((skill, idx) => (<div style={{ padding: '0.3rem 0.5rem', background: '#2abba7', color: 'white', borderRadius: '5px' }} key={idx}>
+					  {skill}
+				  </div>))}
+			  </div>
+      </div>
+    </div>
+  );
+})}
 
-								<p>
-									<strong>Responsibilities:</strong>
-								</p>
-								<ul>
-									{ex.responsibilities.map((responsibility, index) => (
-										<li key={index}>{responsibility}</li>
-									))}
-								</ul>
-							</div>
-						</div>
-					);
-				})}
 			</div>
 		</section>
 	);
