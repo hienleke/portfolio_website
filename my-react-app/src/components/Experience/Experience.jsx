@@ -52,7 +52,8 @@ const Experience = () => {
 			logo: apg_logo,
 			role: "Backend Engineer",
 			duration: "Nov 2021 – Nov 2023",
-			skills: ["Express",  "SocketIO","MongoDB", "Redis", "RabbitMQ", "MySQL", "Postgres", "GraphQL", "Jest", "CI/CD", "S3", "PM2", "Schedule", "Docker", "Microservice" ,"DataDog" ],
+			skills: ["Express",  "SocketIO","MongoDB", "Redis", "RabbitMQ", "MySQL", "Postgres", "GraphQL", "Jest", "CI/CD", "S3", "PM2", "Schedule", "Docker", "Microservice" ,"DataDog" , "Jira" ],
+
 			responsibilities: [
 				"Designed and implemented a notification system and newsfeed for ERP system, replacing outdated module.",
 				"Migrated data from Discord chat system to custom-built chat system, improving real-time communication by 40%.",
@@ -66,6 +67,9 @@ const Experience = () => {
 			location: "Tan Binh District, HCM city, Viet Nam",
 			role: "Software Engineer Intern",
 			duration: "Jan 2021 – Jun 2021",
+			skills: [ "Spring Boot", "Spring Data JPA", "Spring Security", "Spring MVC",
+				"Java",
+				"MYSQL", "SQL SERVER" , "APACHE" , "PostMan" , "XML" ],
 			responsibilities: [
 				"Researched and developed web services, coding conventions, style guides, and design patterns for backend systems.",
 				"Collaborated with team leader to design database schema and implement backend services, including comment, newsfeed, and notification systems.",
@@ -131,7 +135,6 @@ const Experience = () => {
 								<div><img style = {{ height : '50px' , width : '50px' , borderRadius : '50%'}} src={ex.logo}></img>	<h4>{ex.company}</h4 > {ex.product_link ?<span>Demo : <span className="emoji">👉</span> <a href={ex.product_link}  style ={{ color : '#029aeb'}} target="_blank">Link </a>   </span> :   " "}</div>
 									<p style={{ color: "#747474" }}>{ex.location}</p>
 								</div>
-						
 								<h4>{ex.role}</h4>
 								<p>
 									{ex.techstack?.map((tech, idx) => (
