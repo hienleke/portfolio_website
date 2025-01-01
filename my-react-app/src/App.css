@@ -132,6 +132,7 @@ section {
 }
 
 .slideUp {
+	opacity: 0;
 	animation: slideUp 3s ease-in-out forwards;
 	animation-delay: 1.5s;
 }
