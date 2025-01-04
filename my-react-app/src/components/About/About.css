@@ -8,6 +8,11 @@
 	color: var(--tony-dark-text);
 	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b);
 }
+
+.animate-waving-hand {
+	display: inline-block;
+    animation: wave 1.5s linear infinite;
+}
 .about h1 {
 	font-size: 1.5rem;
 }

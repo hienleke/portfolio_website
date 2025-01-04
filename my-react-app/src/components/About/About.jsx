@@ -10,7 +10,8 @@ const About = () => {
     <section id="about" className="about bounds box-card "  ref={currentRef}>
       <div className="infor" style={ { flex : 2 }}>
         <h1 style={{ color: 'white' }}>Hello,</h1>  
-        <h1 className='text-about' style={{ color: 'white' }}>My name is Le Ke Hien (Tony)</h1>
+   
+        <h1 className='text-about' style={{ color: 'white' }}> <span className="animate-waving-hand">👋</span> My name is Le Ke Hien (Tony)</h1>
       </div>
       
       
