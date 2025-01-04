@@ -14,7 +14,7 @@ const Projects = () => {
       "Express",
       "Redux",
       "React",
-      "Postgres" , "Puppeteer" ,"Sequelize" ,]
+      "Postgres" , "Puppeteer" ,"Sequelize" , "Docker" , "Docker-compose" , "Ci-cd-render.com"]
   }];
 
   const currentRef = useRef(null);
