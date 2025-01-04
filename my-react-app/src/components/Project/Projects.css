@@ -40,6 +40,9 @@
 	border: #5f454591 1px solid;
 }
 .project-card h3 {
+	padding: 0.5rem;
+	display: inline-flex;
+	justify-content: space-between;
 	width: 100%;
 	border-top: #585a5eba	1px solid;
 	text-align: left;

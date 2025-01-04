@@ -9,6 +9,7 @@ const Projects = () => {
     image: scape_project,
     url : 'https://lekehien-mediascraper.onrender.com/',
     informaion: "Login usermame: 'admin' password :'password'",
+    github: "https://github.com/hienleke/tony_lekehien_mediaScraper",
     skills: [
       "Express",
       "Redux",
@@ -26,7 +27,9 @@ const Projects = () => {
         {projects.map((project, index) => (
           <li key={index} className="project-card">
             <img src={project.image} alt={project.name} />
-            <h3>{project.name}</h3>
+            <h3>{project.name} <span style={{fontSize:'1rem'}}> 					<a href={project.github} target="_blank" rel="noopener noreferrer">
+						<img style={{width : '100%' , height : '2rem' ,border : "none"}} src={"https://skillicons.dev/icons?i=github"} alt="GitHub" />
+					</a></span></h3>
             <p>{project.detail}</p>
             <div className='skill-tabs'>{project.skills.map((skill, index) => {
               return (
