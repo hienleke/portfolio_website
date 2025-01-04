@@ -172,6 +172,7 @@
 }
 
 .emoji {
+	display: inline-block;
     font-size: 1rem;
-    animation: moveInOut 3s ease infinite; 
+    animation: moveInOut 1s linear infinite; 
 }
