@@ -17,6 +17,9 @@ const NavMenu = () => {
 			<a href="#experience" className={currentComponent?.toLowerCase() === "experience" ? "active" : ""}>
 				Experience
 			</a>
+			<a href="#projects" className={currentComponent?.toLowerCase() === "projects" ? "active" : ""}>
+				Projects
+			</a>
 			<a href="#skill" className={currentComponent?.toLowerCase() === "skill" ? "active" : ""}>
 				Skills
 			</a>

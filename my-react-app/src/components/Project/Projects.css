@@ -1,43 +1,94 @@
 #projects {
-	background: #fff;
+	background: linear-gradient(262.44deg, rgba(11, 13, 12, 0.32) 9.76%, #130f0fd1 90.82%);
 	padding: 40px;
-	border-radius: 8px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	margin: 20px;
-  position: relative;
+	position: relative;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	height: 100%;
 }
-
-#projects h2 {
-	font-size: 2rem;
+.project-card {
+	border-radius: 6px;
+	box-shadow: 0.5rem 0.5rem 0px 0px rgb(159, 148, 135);
+	background-color: rgb(225, 233, 243);
+	padding: 1rem;
+	width: 20%;
+	flex-wrap: nowrap;
 	margin-bottom: 20px;
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
-#projects ul {
-	list-style-type: none;
-	padding: 0;
+.project-card img {
+	width: 100%;
+	height: 60%;
+	border-radius: 8px;
+	border: #5f454591 1px solid;
+}
+.project-card h3 {
+	width: 100%;
+	border-top: #585a5eba	1px solid;
+	text-align: left;
+	color: black;
+	font-size: 1.5rem;
+	margin: 10px 0;
 }
 
-#projects ul li {
-	margin-bottom: 20px;
+.project-card p  {
+	width: 100%;
+	font-size: 0.7rem;
+	margin: 10px 0;
+	color: rgb(108, 102, 97);
 }
 
-#projects ul li h3 {
-	font-size: 1.4rem;
-	color: #333;
+.project-card .project-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	border-radius: 3rem;
+	padding: 0.5rem;
+	background-color: green;
+	transition: all 0.9s ease;
 }
 
-#projects ul li p {
-	font-size: 1.1rem;
-	color: #555;
-}
-
-#projects a {
-	font-size: 1.1rem;
-	color: #61dafb;
+.project-card a{
+	transition: all 0.9s ease;
 	text-decoration: none;
 }
 
-#projects a:hover {
-	text-decoration: underline;
+.project-card .project-links:hover {
+	background-color: linear-gradient(262.44deg, rgba(208, 71, 169, 0.32) 9.76%, #184bd9d1 90.82%);
 }
 
+.project-card .project-links:hover a{
+	transform: translateX(-100%);
+}
+
+
+.project-card:hover {
+	transform: translateY(-5px) scale(1.05);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-list {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import setCurrentComponent from "../../redux/action"; // Import the action
+import setCurrentComponent from "../../redux/action"; 
 
 const useVisibility = (elementRef, componentName) => {
 	const dispatch = useDispatch();

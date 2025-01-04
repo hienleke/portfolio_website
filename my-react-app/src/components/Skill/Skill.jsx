@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import "./Skill.css";
 import useVisibility from "../custom_hook/useVisibility";
-
+//import useScrollAnimation from "../custom_hook/useScrollAnimation";
 const Skill = () => {
-  const currentRef = useRef(null);
+  let  currentRef = useRef(null);
   useVisibility(currentRef, 'Skill');
+
   const skills =
   {
     programming_languages: [

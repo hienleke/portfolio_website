@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
 import Skill from "./components/Skill/Skill";
+import Projects from "./components/Project/Projects";
 
 function App() {
 	const [activeSection, setActiveSection] = useState("");
@@ -45,7 +46,8 @@ function App() {
 				}}>
 				<About  />
 				<NavMenu />
-				<Experience  />
+				<Experience />
+				<Projects/>
 				<Skill />
 				<Footer /> 
 			</div>
