@@ -79,7 +79,7 @@
 }
 
 .project-card .project-links:hover a{
-	transform: translateX(-100%);
+	transform: translateX(-60%);
 }
 
 
