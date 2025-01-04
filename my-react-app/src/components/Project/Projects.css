@@ -79,15 +79,28 @@
 }
 
 .project-card .project-links:hover a{
-	transform: translateX(-60%);
+	transform: translateX(-40%);
 }
-
 
 .project-card:hover {
 	transform: translateY(-5px) scale(1.05);
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.project-card .project-image{
+	transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image{
+	transform: scale(1.05);
+}
+.github-icon{
+	transition: transform 0.3s ease;
+}
+
+.github-icon:hover {
+	transform: scale(1.2);
+}
 .project-list {
 	width: 100%;
 	height: 100%;
