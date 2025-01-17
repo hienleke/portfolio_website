@@ -3,27 +3,27 @@ import "./NavMenu.css";
 import { useSelector } from "react-redux";
 
 const NavMenu = () => {
-	const {currentComponent} = useSelector((state) => state.currentComponent);
+	const {data} = useSelector((state) => state.currentComponent);
 
 	useEffect(() => {
-		console.log("current component:", currentComponent);
-	}, [currentComponent]);
+		console.log("current component:", data);
+	}, [data]);
 
 	return (
 		<div className="Nav_right bounds">
-			<a href="#about" className={currentComponent?.toLowerCase() === "about" ? "active" : ""}>
+			<a href="#about" className={data?.toLowerCase() === "about" ? "active" : ""}>
 				About
 			</a>
-			<a href="#experience" className={currentComponent?.toLowerCase() === "experience" ? "active" : ""}>
+			<a href="#experience" className={data?.toLowerCase() === "experience" ? "active" : ""}>
 				Experience
 			</a>
-			<a href="#projects" className={currentComponent?.toLowerCase() === "projects" ? "active" : ""}>
+			<a href="#projects" className={data?.toLowerCase() === "projects" ? "active" : ""}>
 				Projects
 			</a>
-			<a href="#skill" className={currentComponent?.toLowerCase() === "skill" ? "active" : ""}>
+			<a href="#skill" className={data?.toLowerCase() === "skill" ? "active" : ""}>
 				Skills
 			</a>
-			<a href="#contact" className={currentComponent?.toLowerCase() === "footer" ? "active" : ""}>
+			<a href="#contact" className={data?.toLowerCase() === "footer" ? "active" : ""}>
 				Contact
 			</a>
 		</div>

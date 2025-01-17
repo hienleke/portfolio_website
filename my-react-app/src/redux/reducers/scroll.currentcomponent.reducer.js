@@ -1,5 +1,5 @@
 const initialState = {
-  data: null, // Mặc định chưa có component nào được chọn
+  currentComponent: null, 
 };
 
 const currentComponentReducer = (state = initialState, action) => {
@@ -7,7 +7,7 @@ const currentComponentReducer = (state = initialState, action) => {
     case 'SET_CURRENT_COMPONENT':
       return {
         ...state,
-        data: action.payload, // Cập nhật tên component hiện tại
+        currentComponent: action.payload, 
       };
     default:
       return state;
