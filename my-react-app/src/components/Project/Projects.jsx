@@ -16,14 +16,25 @@ const Projects = () => {
       "React",
       "Postgres" , "Puppeteer" ,"Sequelize" , "Docker" , "Docker-compose" , "Ci-cd-render.com"]
   }];
-
+  const swipeRef = useRef(null);
   const currentRef = useRef(null);
   useVisibility(currentRef, 'projects');
+  function handclickSwipe(direction) {
+    let left = -200;
+    if (direction === 'right') {
+      left = 200;
+    }
+    if (swipeRef.current) {
+      swipeRef.current.scrollBy({ left: left, behavior: "smooth" });
+    }
+  }
 
   return (
     <section id="projects" className='projects-section' ref={currentRef}>
+        <button className="swipe-button  swipe-left" onClick={() => handclickSwipe("left")} ></button>
+      <button className="swipe-button  swipe-right" onClick={() => handclickSwipe("right")}  ></button>
       <h3>Personal project</h3>
-      <ul className="project-list">
+      <ul className="project-list" ref={swipeRef} >
         {projects.map((project, index) => (
           <li key={index} className="project-card">
             <img className="project-image"  src={project.image} alt={project.name} />

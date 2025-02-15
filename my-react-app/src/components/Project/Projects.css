@@ -104,9 +104,52 @@
 	transform: scale(1.2);
 }
 .project-list {
+	padding: 2em;
+	scroll-behavior: smooth;
+    overscroll-behavior-x: contain; /* Ngăn cuộn lan ra ngoài */
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+    -ms-overflow-style: none;
+	overflow-x: hidden;
 	width: 100%;
 	height: 100%;
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: space-between;
+	gap: 2rem
 }
+
+.swipe-left{
+	left: 5%;
+	background-image: url('../../asset/image-slidebutton.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}.swipe-right {
+	right: 5%;
+	background-image: url('../../asset/image-slidebutton.png');
+	transform: rotate(180deg);
+	background-repeat: no-repeat;
+	background-position: center;
+
+
+}
+.swipe-button {
+	background-color: rgba(248, 238, 238, 0.849);
+	color: rgb(90, 20, 20);
+	border-radius: 50%;
+	cursor: pointer;
+	height: 3rem;
+	width: 3rem;
+	z-index: 2;
+	position: absolute;
+	border: 0 solid white;
+	transition: scale 0.3s ease;
+	box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.swipe-button:hover {
+	background-color: rgba(119, 116, 116, 0.849);
+	color: rgb(87, 82, 82);
+	scale: 1.2;
+}
+
