@@ -7,7 +7,7 @@ const About = () => {
   useVisibility(currentRef, 'About');
 
   return (
-    <section id="about" className="about bounds box-card "  ref={currentRef}>
+    <section id="about" className="about "  ref={currentRef}>
       <div className="infor" style={ { flex : 2 }}>
         <h1 style={{ color: 'white' }}>Hello,</h1>  
    

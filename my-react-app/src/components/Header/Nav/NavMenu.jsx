@@ -10,7 +10,7 @@ const NavMenu = () => {
 	}, [data]);
 
 	return (
-		<div className="Nav_right bounds">
+		<div className="Nav_right ">
 			<a href="#about" className={data?.toLowerCase() === "about" ? "active" : ""}>
 				About
 			</a>

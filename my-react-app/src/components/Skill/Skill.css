@@ -47,6 +47,19 @@
 	cursor: pointer;
 }
 
+.skill-item {
+  background: linear-gradient(45deg, #2292dd, #fde68a);
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.2s ease-out, transform 1.4s ease-out;
+}
+
+
+.skill-item.visible {
+	opacity: 1;
+	transform: translateY(0);
+  }
+
 .skill-item:hover p {
 	color: black; /* Thay đổi màu chữ khi hover */
 	background-color: rgb(247, 247, 247);

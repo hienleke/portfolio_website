@@ -76,6 +76,8 @@ const Experience = () => {
 			],
 		},
 	];
+	const [visibleItems, setVisibleItems] = useState(new Set());
+	const itemsRef = useRef([])
 	const elementRef = useRef(null);
 	useVisibility(elementRef, 'experience');
 	
@@ -107,8 +109,27 @@ const Experience = () => {
 		};
 	}, []);
 
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("visible");
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+	
+		const items = document.querySelectorAll(".experience-item  .content");
+		items.forEach((item) => observer.observe(item));
+	
+		return () => {
+			items.forEach((item) => observer.unobserve(item));
+		};
+    }, [visibleItems]);
 	return (
-		<section id="experience" ref={elementRef} className="experience bounds ">
+		<section id="experience" ref={elementRef} className="experience ">
 			<h2 className="headLine expericence-headLine">
 				<span className="experience-title">Experience</span>
 			</h2>
@@ -130,7 +151,7 @@ const Experience = () => {
 					return (
 						<div key={ex.company} className={`experience-item ${index % 2 === 0 ? "left" : "right"}`}>
 							<div className="duration-working">{ex.duration}</div>
-							<div className="content box-card">
+							<div className="content" ref={(el) => (itemsRef.current[index] = el)}>
 								<div className="company-info" style={{ display: "flex", width: "100%", justifyContent: "space-between", alignItems: "center" }}>
 								<div><img style = {{ height : '50px' , width : '50px' , borderRadius : '50%'}} src={ex.logo}></img>	<h4>{ex.company}</h4 > {ex.product_link ?<span>Demo : <span className="emoji">👉</span> <a href={ex.product_link}  style ={{ color : '#029aeb'}} target="_blank">Link </a>   </span> :   " "}</div>
 									<p style={{ color: "#747474" }}>{ex.location}</p>
