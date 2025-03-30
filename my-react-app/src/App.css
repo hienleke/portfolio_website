@@ -16,6 +16,7 @@
 	--tony-color4: #e3b527;
 	--tony-color4-dark: #706238;
 	--tony-dark-background: #100f12;
+	--tony-background-color : #271E2C;
 	--tony-dark1-background: #ebe7dc;
 	--tony-dark-header: #ececec;
 	--tony-dark-text: #a9a9a9;
@@ -57,7 +58,7 @@ body {
 	font-family: "Figtree", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 	margin: 0;
 	padding: 0;
-	color: var(--tony-light-very-element-backgound);
+	color: var(--tony-background-color);
 }
 
 .App {

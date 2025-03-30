@@ -7,7 +7,7 @@ const currentComponentReducer = (state = initialState, action) => {
     case 'SET_CURRENT_COMPONENT':
       return {
         ...state,
-        data: action.payload, // Cập nhật tên component hiện tại
+        data: action.payload, 
       };
     default:
       return state;

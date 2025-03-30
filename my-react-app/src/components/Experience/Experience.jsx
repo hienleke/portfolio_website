@@ -12,7 +12,7 @@ const Experience = () => {
 			logo: innorix_logo,
 			location: "(Remote) HCM city, Viet Nam",
 			role: "Fullstack Software Engineer",
-			duration: "Dec 2023 – Nov 2024",
+			duration: "Dec 2023 – Mar 2025",
 			skills: [
 				"Express",
 				"RabbitMQ",
